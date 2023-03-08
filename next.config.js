@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+  assetPrefix: "./",
+  trailingSlash: true,
+  // reactStrictMode: true,
+  // swcMinify: true,
+  // exportTrailingSlash: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+}
+
+@import "core/colors";
+@import "core/breakpoints";
+@import "core/typrography";
+@import "core/global";
+@import "partials/header";

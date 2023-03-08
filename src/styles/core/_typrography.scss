@@ -1,0 +1,85 @@
+.text-s22 {
+  font-size: 18px;
+
+  @include sm {
+    font-size: 1.3906rem;
+  }
+}
+
+.text-s18 {
+  font-size: 1.125rem;
+}
+
+.text-s36 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+
+  @include sm {
+    font-size: 2.25rem;
+  }
+}
+
+.title-size {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.25rem;
+
+  @include sm {
+    font-size: 2.25rem;
+  }
+}
+
+.line-after {
+  position: relative;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: "";
+    width: 128px;
+    height: 3px;
+    border-radius: 6.1875rem;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @include lg {
+      transform: translateX(0%);
+      left: 0;
+    }
+
+    @apply bg-red;
+  }
+}
+
+.button-red {
+  text-align: center;
+  padding: 8px 24px;
+  background: $red;
+  color: $white;
+  @apply font-medium;
+
+  &:hover {
+    background: $darkred;
+  }
+
+  &:active {
+    background: $red;
+  }
+}
+
+.button-white {
+  text-align: center;
+  padding: 8px 24px;
+  background: $white;
+  color: $red;
+  @apply font-medium;
+
+  &:hover {
+    background: #fff;
+  }
+
+  &:active {
+    background: $white;
+  }
+}

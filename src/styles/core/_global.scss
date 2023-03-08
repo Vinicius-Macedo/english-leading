@@ -1,0 +1,83 @@
+.tclgtl {
+  text-align: center;
+
+  @include lg {
+    text-align: left;
+  }
+}
+
+.svg-effect {
+  padding: 16px 20px 16px 0;
+
+  &:hover {
+    svg {
+      right: -10px;
+    }
+  }
+
+  svg {
+    transition: 0.3s;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.faq-container {
+  transition: 0.5s;
+  border-bottom: solid 1px #ddd;
+  padding: 20px 0;
+
+  .resposta {
+    transition: 0.5s;
+    max-height: 0;
+    overflow-y: hidden;
+    visibility: hidden;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .dropdown-icon {
+    transition: 0.5s;
+    transform: rotate(0deg);
+  }
+
+  .pergunta-container {
+    @apply flex items-center justify-between cursor-pointer;
+  }
+
+  .resposta {
+    @apply text-black text-s18;
+  }
+}
+
+.faq-container.open {
+  .resposta {
+    transition: 0.5s;
+
+    max-height: 135px;
+    overflow: hidden;
+    visibility: visible;
+  }
+
+  .dropdown-icon {
+    transition: 0.5s;
+    transform: rotate(180deg);
+  }
+}
+
+.british-background {
+  background: url("/reino-unido-bandeira.png") center no-repeat;
+  background-size: cover;
+}
+
+.ny-background {
+  background: url("/nova-york.png") center no-repeat;
+  background-size: cover;
+}
